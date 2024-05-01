@@ -6,10 +6,11 @@ class ForecastWeather(BaseModel):
 
 class User(BaseModel):
     email: EmailStr
-    Password: str
+    password: str
 
 class UserOut(BaseModel):
     id: int
     email: str
+
 class TokenData(BaseModel):
     id: int

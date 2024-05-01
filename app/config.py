@@ -1,7 +1,6 @@
 from pydantic_settings import BaseSettings,SettingsConfigDict
 
 class Settings(BaseSettings):
-    KEY: str
     secret_key: str
     algorithm: str
     access_token_expire_minutes: int

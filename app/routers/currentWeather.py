@@ -14,7 +14,6 @@ api_key = "43155ad1b40cf402395c590aab20fac1"
 @router.get('/')
 def CurrentWeather(appid: str, city: str,unit: str, db: session = Depends(database.get_db), current_user:int = Depends(get_curent_user)):
     try:
-
        base_url =  "http://api.openweathermap.org/data/2.5/weather?"
        url = base_url + "appid=" + appid+ "&q=" + city +"&unit=" + unit
        request = requests.get(url).json()['main']

@@ -1,8 +1,10 @@
 from  fastapi import FastAPI
-from .routers import currentWeather
+from .routers import currentWeather,login,users
 app = FastAPI()
 
 app.include_router(currentWeather.router)
+app.include_router(login.router)
+app.include_router(users.router)
 
 @app.get('/')
 def index():
